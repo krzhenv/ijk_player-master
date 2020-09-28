@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/resolution_textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:gravity="center_horizontal"
+        android:hint="实验室测试"
+        android:textColor="#000000"
+        android:textSize="40sp" />
+
+ <LinearLayout
+     android:id="@+id/Spinners"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:orientation="vertical"
+     android:layout_below="@id/resolution_textView"
+     android:layout_alignRight="@id/resolution_textView">
+    <Spinner
+        android:id="@+id/Spinner_VIdeo_Model"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:entries="@array/Video_Model">
+
+    </Spinner>
+<!--        android:layout_below="@id/Click" />-->
+
+     <Spinner
+         android:id="@+id/Spinner_Video_Stream"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_below="@id/Spinner_VIdeo_Model">
+
+     </Spinner>
+<!--         android:entries="@array/Video_Stream" />-->
+ </LinearLayout>
+    <Button
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/FullSreenVideo"
+        android:layout_margin="10dp"
+        android:text="返回"></Button>
+    <RelativeLayout
+        android:id="@+id/FullSreenVideo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Spinners"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+        <com.dou361.ijkplayer.widget.IjkVideoView
+            android:id="@+id/FullSreenVideo_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/FullSreenVideo_view"
+            android:hint="实验室测试"
+            android:gravity="center"></TextView>
+    </RelativeLayout>
+
+</RelativeLayout>
